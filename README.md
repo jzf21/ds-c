@@ -1,6 +1,8 @@
 ## I'm a Computer Science and Engineering Student  
 
 -At Model Engineering College Thrikkakara
+-Tries to make goofy games with pygame
+-Learning flask at the moment
 
 ---
 
