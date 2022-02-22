@@ -39,10 +39,10 @@
   
   <div align="center"> 
      <a href="">
-      <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api?username=adamsyy&show_icons=true&include_all_commits=true&count_private=true&theme=react&line_height=40" />
+      <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jzf21&show_icons=true&include_all_commits=true&count_private=true&theme=react&line_height=40" />
     </a>
     <a href="">
-      <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adamsyy&theme=react&line_height=40&hide=css"/>
+      <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jzf21&theme=react&line_height=40&hide=css"/>
     </a>
 </div
 
@@ -50,12 +50,11 @@
 <br />
 
 ---
-  [![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=adamsyy&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
 
-[instagram]: https://www.instagram.com/adamsy.7/
-[linkedin]: https://www.linkedin.com/in/adamoommenjacob/
-[Spotify]: https://open.spotify.com/track/2dqqDKp2LRm1MsyqxWeRIO?si=754036734852420e
-[Youtube]:https://www.youtube.com/watch?v=i6uxF_ZPtMM&t=23s  
+
+[instagram]: https://www.instagram.com/jzf__21/
+[linkedin]: https://www.linkedin.com/in/jzf21/
+
   
