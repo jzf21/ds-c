@@ -1,8 +1,8 @@
-## I'm a Computer Science and Engineering Student  
+## I'm a Computer Science  Engineering Student  
 
 -At Model Engineering College Thrikkakara
 -Tries to make goofy games with pygame
--Learning flask at the moment
+-Learning React at the moment
 
 ---
 
