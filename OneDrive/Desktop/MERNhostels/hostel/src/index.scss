@@ -1,0 +1,427 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+$font-family: "Poppins";
+$bg-color: #252954;
+$body-color: #9b9ca7;
+$main-bg: #0e0e23;
+:root {
+ --delay: 0s;
+}
+
+body{
+  background-color: $main-bg;
+  color: $body-color;
+  font-family: $font-family;
+  margin: 0;
+}
+
+.navbar1{
+
+  background: rgb(20, 24, 52);
+  background: radial-gradient(
+   circle,
+   rgba(20, 24, 52, 1) 0%,
+   rgba(19, 22, 47, 1) 100%
+  );
+  box-shadow: 0 16px 12px $main-bg;
+  padding: 0 20px;
+  
+  animation: top 1s both;
+  display: flex;
+  
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  &:before {
+   content: "";
+   width: 100%;
+   height: 25px;
+   position: absolute;
+   top: -25px;
+   left: 0;
+   background-color: $main-bg;
+  }
+}
+
+.x{
+  -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+#navbarToggler:checked+.x {
+  z-index: 3;
+  white-space: nowrap;
+  margin-top: auto;
+  position: absolute;
+  right: 0;
+  display: flex;
+  background-color: #25295472;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0s;
+  
+
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+  width: 100%;
+  height: 300px;
+  
+}
+
+#navbarToggler1:checked+div {
+  position: absolute;
+  display: flex;
+}
+
+.card {
+  background: rgb(26, 32, 73);
+  background: radial-gradient(
+   circle,
+   rgba(26, 32, 73, 1) 0%,
+   rgba(19, 22, 47, 1) 100%
+  );
+  
+  padding: 40px 30px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+ 
+  max-height: 450px;
+  min-width: 220px;
+  width: auto;
+  }
+
+
+  .user-box {
+    margin-top: 25px;
+    display: flex;
+    & + & {
+     margin-top: 20px;
+     .cards-wrapper {
+      margin-left: 0;
+      flex-grow: 1;
+      max-width: none;
+     }
+     .today {
+      margin-left: 30px;
+     }
+     .cards-header {
+      padding: 20px 30px;
+      justify-content: space-between;
+     }
+    }
+    .cards-header,
+    .cards-view {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     svg {
+      width: 24px;
+     }
+     .title {
+      margin: 0 16px;
+      font-size: 15px;
+     }
+     &-date svg {
+      width: 30px;
+     }
+     .cards-button {
+      background: #15193c;
+      padding: 10px 16px;
+      margin-right: 0;
+      svg {
+       width: 16px;
+       margin: 0 2px 0 0;
+      }
+     }
+     .date-wrapper {
+      display: flex;
+      align-items: center;
+      margin: auto;
+      .title {
+       margin: 0 16px;
+      }
+     }
+    }
+   }
+   
+   .cards-view > svg {
+    margin-right: 12px;
+   }
+   
+   .link {
+    color: $body-color;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+    svg {
+     width: 20px;
+     margin-right: 14px;
+    }
+    &.active,
+    &:hover {
+     background: #11132c;
+     border-bottom: 3px solid #4255d4;
+    }
+  }
+
+  .link1 {
+    outline: 2px solid;
+  
+    border-radius: 25px;
+    outline-offset: -16px;
+    position:absolute;
+    right: 0;
+    margin-right: 30px;
+    color: $body-color;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 26px;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+    svg {
+     width: 20px;
+
+     margin-right: 14px;
+    }
+    &.active,
+    &:hover {
+     
+    }
+  }
+
+  .logo {
+    padding: 20px 50px 20px 0;
+    font-size: 16px;
+    color: #e7e8ea;}
+
+    .user-info {
+      margin-left: auto;
+      display: flex;
+      align-items: center;}
+      .discount {
+        max-width: 320px;
+        width: 100%;
+        .title {
+         margin-bottom: 30px;
+        }
+        .subtitle {
+         margin-bottom: 8px;
+         &-count {
+          font-size: 17px;
+          color: #17a98a;
+          font-weight: 500;
+          & + .subtitle {
+           margin-top: 20px;
+          }
+          &.dist {
+           color: #b9b7b7;
+          }
+         }
+        }
+        &-wrapper {
+         display: flex;
+        }
+        &-chart {
+         margin-left: auto;
+        }
+        &-profile {
+         display: flex;
+         align-items: center;
+         margin-top: 40px;
+        }
+        &-img {
+         width: 48px;
+         height: 48px;
+         border-radius: 50%;
+         object-fit: cover;
+         margin: 0 16px 0 12px;
+        }
+        &-name {
+         font-weight: 500;
+         font-size: 15px;
+        }
+        &-type {
+         font-size: 13px;
+         margin-top: 4px;
+        }
+       }
+       
+       .button {
+        display: flex;
+        align-items: center;
+        color: $body-color;
+        background: #1a1b3c;
+        border: none;
+        padding: 2px 12px;
+        border-radius: 4px;
+        margin-right: 20px;
+        svg {
+         margin-left: 10px;
+         width: 16px;
+        }
+       }
+       .offer-button {
+        background: #4255d4;
+        padding: 14px;
+        text-align: center;
+        justify-content: center;
+      
+        margin-right: 0;
+        color: #fff;
+        font-size: 13px;
+        cursor: pointer;
+       }
+
+       
+
+ .outline{
+  outline: #17a98a solid ;
+ }
+
+
+
+
+h3{
+  color:#226597 ;
+}
+input {
+
+  box-sizing: border-box;
+}
+form button {
+  background: #226597;
+  border: 0;
+  color: #F7F7FF;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card1 {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 420px;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  margin-top: 90px;
+  background: rgb(26, 32, 73);
+  background: radial-gradient(
+   circle,
+   rgba(26, 32, 73, 0.641) 0%,
+   rgba(19, 22, 47, 0.633) 100%
+  );
+  backdrop-filter: blur(20px);
+}
+
+.card_title {
+  text-align: center;
+  padding: 10px;
+}
+
+.card_title h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #4796ff;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.card_terms {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.card_terms input[type="checkbox"] {
+  background-color: #e2e2e2;
+}
+
+.card_terms span {
+  margin: 5px;
+  font-size: 13px;
+}
+
+.card1 a {
+  color: #4796ff;
+  text-decoration: none;
+}
+
+.card2 {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 400px;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  margin-top: 90px;
+  background: rgb(26, 32, 73);
+  background: radial-gradient(
+   circle,
+   rgba(26, 32, 73, 0.641) 0%,
+   rgba(19, 22, 47, 0.633) 100%
+  );}
+
+  .card2 a {
+    color: #4796ff;
+    text-decoration: none;
+  }
+
+  .card img{
+    overflow: hidden;
+    max-width: 400px;
+    
+  }
+
+  .listing{
+    width: 400px;
+    height: 400px;
+    margin: 7rem;
+  }
