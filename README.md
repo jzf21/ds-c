@@ -1,8 +1,8 @@
 ## I'm a Computer Science  Engineering Student  
 
 -At Model Engineering College Thrikkakara
--Tries to make goofy games with pygame
--Learning React at the moment
+-React Developer
+-Always ready to tackle challenges.
 
 ---
 
