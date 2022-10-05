@@ -25,7 +25,7 @@
 ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=ffffff)
 ![Django](https://img.shields.io/badge/-Django-61DAFB?style=flat-square&logo=django&logoColor=ffffff)
 ![Sqlite3](https://img.shields.io/badge/-Sqlite3-FFCA28?style=flat-square&logo=sqlite3&logoColor=ffffff)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 
 
 <br/>
