@@ -1,7 +1,7 @@
 ## I'm a Computer Science  Engineering Student  
 
 -At Model Engineering College Thrikkakara
--React Developer
+-Full Stack Developer
 -Always ready to tackle challenges.
 
 ---
