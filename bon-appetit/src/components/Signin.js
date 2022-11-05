@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function SignupPage() {
+    const navigate =useNavigate()
  const [state, setState] = useState({
   email: '',
   
@@ -28,7 +30,9 @@ const handleSubmit = (e) => {
   .then(res => {
 
     if(res.data.message){
+        navigate('/volunteer')
       setLogin(res.data.message);
+
     }
    
    console.log(res);
@@ -48,7 +52,9 @@ const handleSubmitorg = (e) => {
   .then(res => {
 
     if(res.data.message){
+        navigate('/volunteer')
       setLoginorg(res.data.message);
+        
     }
    
    console.log(res);
