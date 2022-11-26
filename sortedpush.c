@@ -34,6 +34,11 @@ void push(int x)
 
 int pop()
 {
+    if (top == -1)
+    {
+        printf("Stack is empty\n");
+        return -1;
+    }
     return stack[top--];
 }
 
