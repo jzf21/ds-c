@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-// sorted push in stack 
-//should make it user defined
+// sorted push in stack
+// should make it user defined
 
 int stack[50];
 int top = -1;
@@ -24,7 +24,7 @@ void push(int x)
             temp[++temp_top] = stack[top--]; // if yes then push it to temp stack and pop it from stack
         }
 
-        stack[++top] = x; //push greater element to stack and then push all the temp elements to stack
+        stack[++top] = x; // push greater element to stack and then push all the temp elements to stack
         while (temp_top != -1)
         {
             stack[++top] = temp[temp_top--];
@@ -58,16 +58,41 @@ int display1()
 
 int main()
 {
-    push(5);
-    push(6);
-    push(7);
-    push(8);
-    push(2);
-    push(7);
-    pop();
-    pop();
-    push(1);
-    display1();
-    int min = pop();
-    printf("%d", min);
+    while (1)
+    {
+        int c;
+        int x;
+        int choice;
+        printf("1. Push\n2. Pop\n3. Display\n4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+
+            printf("Enter the element to be pushed: ");
+            scanf("%d", &x);
+            push(x);
+            break;
+        case 2:
+            c = pop();
+            if (c == -1)
+            {
+                printf("Stack is empty\n");
+            }
+            else
+            {
+                printf("Popped element is %d\n", c);
+            }
+
+        case 3:
+            display1();
+            break;
+        case 4:
+            exit(0);
+        default:
+            printf("Invalid choice\n");
+            break;
+        }
+    }
 }

@@ -1,37 +1,47 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 // palindrome stack
+int top = -1;
+char stack[50];
+int pop()
+{
+    if (top == -1)
+    {
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return stack[top--];
+}
+int push(char x)
+{
+    if (top == 49)
+    {
+        printf("Stack is full\n");
+        return -1;
+    }
+    stack[++top] = tolower(x);
+}
 
 int main()
 {
-    char str[100];
-    int i, j, len, flag = 0;
-    int top = -1;
-    char stack[100];
+    char str[50];
     printf("Enter a string: ");
     scanf("%s", str);
-    len = strlen(str);
-    for (i = 0; i < len; i++)
+    int len = strlen(str);
+    for (int i = 0; i < len; i++)
     {
-        top++;
-        stack[top] = str[i];
+        push(str[i]);
     }
-    for (j = 0; j < len; j++)
+    for (int i = 0; i < len; i++)
     {
-        if (stack[top] == str[j])
+        if (tolower(str[i]) != pop())
         {
-            top--;
-            flag = 1;
-        }
-        else
-        {
-            flag = 0;
-            break;
+            printf("Not a palindrome\n");
+            return 0;
         }
     }
-    if (flag == 1)
-        printf("String is a palindrome\n");
-    else
-        printf("String is not a palindrome\n");
+    printf("Palindrome\n");
     return 0;
 }

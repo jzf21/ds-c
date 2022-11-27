@@ -23,5 +23,39 @@ int isEmpty()
 }
 
 void push(int x){
-    
+    struct node *t;
+    t=(struct node *)malloc(sizeof(struct node));
+    if(t==NULL){
+        printf("Stack is full");
+    }
+    else{
+        t->data=x;
+        t->next=front;
+        front=t;
+    }
+
 }
+//priority queue push
+void ppush(int x){
+    struct node *t,*p;
+    t=(struct node *)malloc(sizeof(struct node));
+    if(t==NULL){
+        printf("Stack is full");
+    }
+    else{
+        t->data=x;
+        t->next=NULL;
+        if(front==NULL){
+            front=rear=t;
+        }
+        else{
+            p=front;
+            while(p->next!=NULL && p->next->data>x){
+                p=p->next;
+            }
+            t->next=p->next;
+            p->next=t;
+        }
+    }
+}
+
