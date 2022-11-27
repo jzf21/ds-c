@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,800;1,100&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: #a50113;
+  --red2: #e50000;
+  --black: #000000;
+  --white: #fffbf2;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+body {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+.flex_col{
+  display: flex;
+  flex-direction: column;
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+}
+.flex_center{
+  justify-content: center;
+  align-items: center;
+}
+.flex_around{
+  justify-content: space-around;
+  align-items: center;
+}
+.flex_between{
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_end{
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex_start{
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex_wrap{
+  flex-wrap: wrap;
+}
+.flex_nowrap{
+  flex-wrap: nowrap;
+}
+.flex_wrap_reverse{
+  flex-wrap: wrap-reverse;
+}
+
