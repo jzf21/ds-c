@@ -6,19 +6,23 @@ int top = -1;
 
 void push(char x)
 {
-    if(top==49){
+    if (top == 49)
+    {
         printf("Stack is full");
     }
-    else{
+    else
+    {
         stack[++top] = tolower(x);
     }
 }
 
 char pop()
 {
-    if (top == -1){
-    printf("Stack is empty");
-        return -1;}
+    if (top == -1)
+    {
+        printf("Invalid Expression");
+        return -1;
+    }
     else
         return stack[top--];
 }
@@ -51,22 +55,24 @@ int main()
             push(*e);
         else if (*e == ')')
         {
-            while ((x = pop()) != '(')
+            while ((x = pop()) != '(' && top != -1)
                 printf("%c ", x);
         }
         else
         {
-            while (priority(stack[top]) >= priority(*e)) //if the priority of the stack top is greater than the priority of the current element pop the stack top
+            while (priority(stack[top]) >= priority(*e)) // if the priority of the stack top is greater than the priority of the current element pop the stack top
                 printf("%c ", pop());
-            push(*e);//else push to stack
+            push(*e); // else push to stack
         }
         e++;
     }
 
     while (top != -1)
     {
-        printf("%c ", pop());
+        if ((x = pop()) != '(')
+            printf("%c ", pop());
+        printf("Invalid Expression");
+        break;
     }
     return 0;
 }
-
