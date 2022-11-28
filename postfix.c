@@ -6,13 +6,19 @@ int top = -1;
 
 void push(char x)
 {
-    stack[++top] = x;
+    if(top==49){
+        printf("Stack is full");
+    }
+    else{
+        stack[++top] = tolower(x);
+    }
 }
 
 char pop()
 {
-    if (top == -1)
-        return -1;
+    if (top == -1){
+    printf("Stack is empty");
+        return -1;}
     else
         return stack[top--];
 }
